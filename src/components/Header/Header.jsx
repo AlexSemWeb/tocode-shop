@@ -2,14 +2,14 @@ import React from 'react'
 import propTypes from 'prop-types'
 import classNames from 'classnames'
 import { NavLink } from 'react-router-dom'
-import { app } from '../../_config'
+import { app } from '_config'
 
-import { Container } from '../../layouts'
+import { Container } from 'layouts'
 
 import './Header.scss'
 
 // icons:
-import { ReactComponent as LogoIcon } from '../../assets/img/logo.svg'
+import { ReactComponent as LogoIcon } from 'assets/img/logo.svg'
 
 const menuLinks = [
   {
