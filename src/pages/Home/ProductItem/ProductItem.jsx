@@ -25,28 +25,24 @@ const ProductItemPage = () => {
 
   // content
   const renderContent = item && (
-    <>
+    <div className='flex flex-col items-center'>
+      <img src={item.img} alt={item.title} style={{ maxWidth: '420px' }} />
       <h1 className='ui-title-1 mb-4'>{item.title}</h1>
-    </>
+      <span>{item.price}</span>
+
+      {/* controls */}
+      <div className='flex mt-4'>
+        <Link className='ui-button isLink' to='/'>
+          Back to home
+        </Link>
+        <div className='ui-button isPrimary'>
+          Add to cart
+        </div>
+      </div>
+    </div>
   )
 
-  // link to home
-  const renderHomeLink = (
-    <p>
-      Go to{' '}
-      <Link className='ui-link' to='/'>
-        Home page
-      </Link>
-      ?
-    </p>
-  )
-
-  return (
-    <Container>
-      {renderContent}
-      {renderHomeLink}
-    </Container>
-  )
+  return <Container>{renderContent}</Container>
 }
 
 export default ProductItemPage

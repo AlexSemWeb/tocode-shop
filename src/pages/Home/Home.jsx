@@ -7,7 +7,7 @@ import products from 'seeders/products'
 const HomePage = () => {
   return (
     <Container>
-      <div className='flex flex-wrap'>
+      <div className='flex flex-wrap mt-4'>
         {products.map((item) => (
           <div
             className='ui-card isAnimated mr-4 mb-4'
