@@ -1,10 +1,14 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import 'react-responsive-carousel/lib/styles/carousel.min.css' // requires a loader
-import { Carousel } from 'react-responsive-carousel'
 
+// carousel:
+import { Carousel } from 'react-responsive-carousel'
+import 'react-responsive-carousel/lib/styles/carousel.min.css' // requires a loader
+
+// components:
 import { Container } from 'layouts'
 
+// data:
 import products from 'seeders/products'
 
 const HomePage = () => {
@@ -12,9 +16,9 @@ const HomePage = () => {
     <Container>
       <Carousel
         showArrows
-        autoPlay
+        // autoPlay
+        // infiniteLoop
         emulateTouch
-        infiniteLoop
         showThumbs={false}
       >
         {products.map((item) => (

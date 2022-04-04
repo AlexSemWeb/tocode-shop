@@ -1,5 +1,6 @@
 import React from 'react'
 
+// components:
 import { Container } from 'layouts'
 
 const AboutPage = () => {
