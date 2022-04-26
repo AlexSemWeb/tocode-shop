@@ -9,7 +9,6 @@ import { Container } from 'layouts'
 
 const productStyles = {
   width: '100%',
-  maxWidth: '520px',
   padding: '10px',
   backgroundColor: 'var(--ui-g-100)',
   borderRadius: '16px',
@@ -24,7 +23,7 @@ const CheckoutPage = () => {
       ? products.map((item, i) => (
           <div
             key={i}
-            className='flex justify-center items-center mb-8'
+            className='flex items-center mb-8'
             style={productStyles}
           >
             <img
@@ -59,10 +58,12 @@ const CheckoutPage = () => {
 
   return (
     <Container>
-      <h1 className='ui-title-1 text-center mb-4'>Checkout</h1>
-      <div className='flex flex-col items-center'>
-        {renderContent}
-        {renderControls}
+      <div style={{ maxWidth: '720px', margin: '0 auto' }}>
+        <h1 className='ui-title-1 text-center'>Checkout</h1>
+        <div className='flex flex-col items-center'>
+          {renderContent}
+          {renderControls}
+        </div>
       </div>
     </Container>
   )

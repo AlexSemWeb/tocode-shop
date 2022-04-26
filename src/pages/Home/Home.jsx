@@ -16,8 +16,8 @@ const HomePage = () => {
     <Container>
       <Carousel
         showArrows
-        autoPlay
-        infiniteLoop
+        // autoPlay
+        // infiniteLoop
         emulateTouch
         showThumbs={false}
       >

@@ -14,7 +14,7 @@ const Footer = ({ ...attrs }) => {
               href='https://tocode.ru/courses/react-s-nulya-do-rezultata/'
               className='ui-link ml-1'
             >
-              React.js - с нуля до результата
+              React.js - С нуля до про
             </a>
           </p>
         </div>
