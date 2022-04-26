@@ -1,23 +1,25 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
+import ReactDOM from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom'
+
+// uimini connect
+// docs: https://uimini.github.io/docs/docs/
+import 'uimini'
 
 // store:
 import Store from './Store'
 
-// libs:
-import 'uimini'
-
-// app:
 import App from './App'
 
-ReactDOM.render(
+const rootElement = document.getElementById('root')
+const root = ReactDOM.createRoot(rootElement)
+
+root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Store>
         <App />
       </Store>
     </BrowserRouter>
-  </React.StrictMode>,
-  document.getElementById('root')
+  </React.StrictMode>
 )

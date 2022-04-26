@@ -10,7 +10,8 @@ const Store = ({ children }) => {
     [products, setProducts]
   )
 
-  React.useEffect(() => console.log(products), [products])
+  // test
+  // React.useEffect(() => console.log(products), [products])
 
   return (
     <ProductsContext.Provider value={productsContext}>

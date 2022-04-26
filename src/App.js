@@ -1,6 +1,7 @@
 import React from 'react'
 import { Routes, Route, Navigate } from 'react-router-dom'
 
+// main styles:
 import './assets/scss/main.scss'
 
 // pages:
