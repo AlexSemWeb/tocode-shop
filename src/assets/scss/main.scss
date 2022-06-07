@@ -13,6 +13,20 @@
   pointer-events: auto !important;
 }
 
+.ui-badge {
+  position: absolute;
+  top: 0;
+  right: 4px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #cc3843;
+  color: white;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: center;
+}
+
 // helpers
 @import './helpers/_helpers';
 

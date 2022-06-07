@@ -4,6 +4,9 @@ import classNames from 'classnames'
 import { NavLink } from 'react-router-dom'
 import { app } from '_config'
 
+// store
+import { ProductsContext } from 'Store'
+
 import { Container } from 'layouts'
 
 import './Header.scss'
@@ -11,6 +14,21 @@ import './Header.scss'
 // icons:
 import { ReactComponent as LogoIcon } from 'assets/img/logo.svg'
 import { ReactComponent as BagIcon } from 'assets/img/bag.svg'
+
+const BagLink = () => {
+  const [products] = React.useContext(ProductsContext)
+
+  return (
+    <>
+      {products && products.length && products.length > 0 ? (
+        <div className='ui-badge'>
+          {products.length > 9 ? '9+' : products.length}
+        </div>
+      ) : null}
+      <BagIcon />
+    </>
+  )
+}
 
 const menuLinks = [
   {
@@ -22,7 +40,7 @@ const menuLinks = [
     alias: '/about',
   },
   {
-    title: <BagIcon />,
+    title: <BagLink />,
     alias: '/checkout',
   },
 ]
