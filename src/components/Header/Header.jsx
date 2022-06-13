@@ -13,7 +13,7 @@ import './Header.scss'
 
 // icons:
 import { ReactComponent as LogoIcon } from 'assets/img/logo.svg'
-import { ReactComponent as BagIcon } from 'assets/img/bag.svg'
+import SvgIconBag from 'js/icons/bagIcon'
 
 const BagLink = () => {
   const [products] = React.useContext(ProductsContext)
@@ -25,7 +25,7 @@ const BagLink = () => {
           {products.length > 9 ? '9+' : products.length}
         </div>
       ) : null}
-      <BagIcon />
+      <SvgIconBag />
     </>
   )
 }
